@@ -1,25 +1,24 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  Exile
 //
-//  Created by Exile Soluciones Tecnológicas on 30/05/17.
+//  Created by Exile Soluciones Tecnológicas on 31/05/17.
 //  Copyright © 2017 Exile Soluciones. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
+class ReportViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
-
