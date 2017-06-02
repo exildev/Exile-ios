@@ -37,47 +37,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onLongin(_ sender: UIButton) {
-        let json = ["username": loginField.text, "password": passwordField.text]
-        let data = JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
+        do{
+            let json = ["username": loginField.text, "password": passwordField.text]
+            let data = try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
         
-        let request = NSMutableURLRequest(url: NSURL(string:"http://104.236.33.228:8000/usuarios/login/")! as URL)
-        request.httpMethod = "POST"
+            let request = NSMutableURLRequest(url: NSURL(string:"http://104.236.33.228:8000/usuarios/login/")! as URL)
+            request.httpMethod = "POST"
         
-        let body = NSMutableData()
-        body.append(data)
+            let body = NSMutableData()
+            body.append(data)
         
-        request.httpBody = body as Data
+            request.httpBody = body as Data
         
-        let task =  URLSession.shared.dataTask(with: request as URLRequest,
-                                               completionHandler: {
-                                                (data, response, error) -> Void in
-                                                if let data = data {
+            let task =  URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {
+                (data, response, error) -> Void in
+                if let data = data {
                                                     
-                                                    // You can print out response object
-                                                    print("******* response = \(String(describing: response))")
+                    // You can print out response object
+                    print("******* response = \(String(describing: response))")
                                                     
-                                                    print(data.count)
-                                                    // you can use data here
-                                                    
-                                                    // Print out reponse body
-                                                    let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-                                                    print("****** response data = \(responseString!)")
-                                                    
-                                                    
-                                                    
-                                                    DispatchQueue.main.async(execute: {
-                                                        //self.activityIndicator.stopAnimating()
-                                                        //self.reportButton.isEnabled = true
-                                                        //let alert = UIAlertController(title: "Reporte de basurero", message: "Reporte enviado con exito", preferredStyle: UIAlertControllerStyle.alert)
-                                                        //alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
-                                                        //self.present(alert, animated: true, completion: nil)
-                                                        //UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                                                    });
-                                                    
-                                                } else if let error = error {
-                                                    print(error.localizedDescription)
-                                                }
+                    print(data.count)
+                    let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                    print("****** response data = \(responseString!)")
+                    
+                    let mainView = self.storyboard?.instantiateViewController(withIdentifier: "MainView")
+                    self.presentedViewController(mainView, animated: true)
+                    
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
         })
         task.resume()
+        } catch{
+            print("error en el json")
+        }
     }
 }
