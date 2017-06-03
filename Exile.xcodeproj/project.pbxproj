@@ -17,6 +17,7 @@
 		1B6D13811EDE2CB50005150D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B6D137F1EDE2CB50005150D /* LaunchScreen.storyboard */; };
 		1B6D138C1EDE2CB60005150D /* ExileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6D138B1EDE2CB60005150D /* ExileTests.swift */; };
 		1B6D13971EDE2CB60005150D /* ExileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6D13961EDE2CB60005150D /* ExileUITests.swift */; };
+		1BEFB1851EE2057800C80528 /* BottoBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFB1841EE2057800C80528 /* BottoBarViewController.swift */; };
 		1BF7556A1EDF3E690011D7C9 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF755691EDF3E690011D7C9 /* ReportViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		1B6D13921EDE2CB60005150D /* ExileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6D13961EDE2CB60005150D /* ExileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExileUITests.swift; sourceTree = "<group>"; };
 		1B6D13981EDE2CB60005150D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BEFB1841EE2057800C80528 /* BottoBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottoBarViewController.swift; sourceTree = "<group>"; };
 		1BF755691EDF3E690011D7C9 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				1B6D137D1EDE2CB50005150D /* Assets.xcassets */,
 				1B6D137F1EDE2CB50005150D /* LaunchScreen.storyboard */,
 				1B6D13821EDE2CB50005150D /* Info.plist */,
+				1BEFB1841EE2057800C80528 /* BottoBarViewController.swift */,
 			);
 			path = Exile;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				TargetAttributes = {
 					1B6D13701EDE2CB50005150D = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = K7HSPKEH7V;
 						ProvisioningStyle = Automatic;
 					};
 					1B6D13861EDE2CB60005150D = {
@@ -274,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B0371241EE0D622009803F5 /* LoginViewController.swift in Sources */,
+				1BEFB1851EE2057800C80528 /* BottoBarViewController.swift in Sources */,
 				1B6D13791EDE2CB50005150D /* ChatViewController.swift in Sources */,
 				1B6D13751EDE2CB50005150D /* AppDelegate.swift in Sources */,
 				1B0371221EE0C037009803F5 /* ProfileViewController.swift in Sources */,
@@ -432,7 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K7HSPKEH7V;
 				INFOPLIST_FILE = Exile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.com.exile.Exile;
@@ -445,7 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K7HSPKEH7V;
 				INFOPLIST_FILE = Exile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.com.exile.Exile;
